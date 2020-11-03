@@ -46,3 +46,8 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+input:focus {
+	outline:none;
+	/* input에서 마우스 클릭시 나오는 outline 제거 - 모든 input에 동일하게 적용시키기 위해 reset.css에서 포함*/
+}
