@@ -1,0 +1,40 @@
+/* font family, 그냥 아래를 기본으로 가져가면 ok, 없으면 이 폰트, 없으면 이거, 그래도 없으면 이거. 이런식임
+google font 에서 사용한 포트의 값을 @import해서 추가 가능
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'sans-serif', 'Helvetica Neue', sans-serif
+}
+
+.status-bar {
+    display:flex;
+    /* justify-content:space-between; 
+    space-between 으로 하는 경우, 뭔가 균형이 안맞음 
+    그래서 css hack ? */
+    justify-content:center;
+}
+
+.status-bar__column{
+    width:33%;
+}
+
+/* Pseudo Selectors */
+.status-bar__column:first-child span {
+    margin-right: 5px;
+}
+.status-bar__column:nth-child(2) {
+    display:flex;
+    justify-content:center;
+}
+.status-bar__column:last-child {
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    /* 해당 위치를 끝에 두고 (default가 row - flex-end) 가운데 정렬함(align-itemrs : center) */
+}
+.status-bar__column .fa-battery-full {
+    margin:0px 5px;
+    /* 위아래, 좌우  */
+}

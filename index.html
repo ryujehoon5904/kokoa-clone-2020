@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- link:css 라고 치면 자동완성됨 -->
+    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Kakao Talk</title>
+</head>
+<body>
+    <div class="status-bar">
+        <div class="status-bar__column">
+            <span>No Service</span>
+            <!-- fontawesome icon -->
+            <i class="fas fa-wifi"></i>
+        </div>
+        <div class="status-bar__column">
+            <span>18:43</span>
+        </div>
+        <div class="status-bar__column">
+            <span>110%</span>
+            <i class="fas fa-battery-full"></i>
+            <i class="fas fa-bolt"></i>
+            <!-- Battery icon -->
+            <!-- Lighting icon -->
+        </div>
+    </div>
+    
+    <!-- header 라는 tag는 여러 html 파일안에 있을테니, class 명으로 누가 부모 tag이고 자식 tag인지 관계도 쉽게 보여줌 (BEM) -->
+
+    <header class="welcome-header">
+        <h1 class="welcome-header__title">Welcome to KakaoTalk</h1>
+        <p class="welcome-header__text">If you have a Kakao Accout, log in with your email or phone number.</p>
+    </header>
+
+    <!-- form 은 왜 id? 만들거에 form 이거밖에 없어서 그런건데, 그래도 BEM 을 고려해서 class를 쓰는게 좋을듯 -->
+    <form id="login-form">
+        <input type="text" placeholder="Email or phone number"/>
+        <input type="password" placeholder="Password"/>
+        <input type="submit" value="Log in"/>
+        <a href="#">Find Kakao Account or Password</a>
+    </form>
+
+
+    <!-- fontawesome code kit,
+        font awesome cdn - svg, 작성해야 icon 사용 가능 -->
+    <script defer src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" integrity="sha384-9/D4ECZvKMVEJ9Bhr3ZnUAF+Ahlagp1cyPC7h5yDlZdXs4DQ/vRftzfd+2uFUuqS" crossorigin="anonymous"></script>    
+    <!-- script는 항상 마지막에 있어야한다. body태그가 닫기 직전에 -->
+</body>
+</html>
