@@ -1,0 +1,32 @@
+.status-bar {
+    display:flex;
+    /* justify-content:space-between; 
+    space-between 으로 하는 경우, 뭔가 균형이 안맞음 
+    그래서 css hack ? */
+    justify-content:center;
+    padding: 5px 3px;
+    /* padding, margin, border 등은 브라우저가 기본값으로 제공해주나, reset.css 추가해서 이를 다 초기화하고, 개별적으로 디자인해서 사용 하기 위해 padding 입력 */
+}
+
+.status-bar__column{
+    width:33%;
+}
+
+/* Pseudo Selectors */
+.status-bar__column:first-child span {
+    margin-right: 5px;
+}
+.status-bar__column:nth-child(2) {
+    display:flex;
+    justify-content:center;
+}
+.status-bar__column:last-child {
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    /* 해당 위치를 끝에 두고 (default가 row - flex-end) 가운데 정렬함(align-itemrs : center) */
+}
+.status-bar__column .fa-battery-full {
+    margin:0px 5px;
+    /* 위아래, 좌우  */
+}
